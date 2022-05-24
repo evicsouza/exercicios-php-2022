@@ -23,5 +23,22 @@ class BaseCountry implements CountryInterface {
   public function __construct(string $name) {
     $this->name = $name;
   }
+  
+  public function getName(): string {
+    return $this -> name;
+  }
+
+  public function getNeighbors(): array {
+    return $this -> newighbors;
+  }
+
+  public function setNeighbors(array $neighbors): void{
+    $this -> neighbors;
+  }
+
+  public function getNumberOfTroops(): int {
+    return $this -> numberOfTroops;
+  }
+
 
 }
