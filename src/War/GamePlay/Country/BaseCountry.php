@@ -48,6 +48,7 @@ class BaseCountry implements CountryInterface {
   }
 
   public function conquer(CountryInterface $conqueredCountry): void {
+    $conqueredCountry -> getNeighbors();
     
 
 
