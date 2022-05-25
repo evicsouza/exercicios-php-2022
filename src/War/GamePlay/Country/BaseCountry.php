@@ -40,5 +40,21 @@ class BaseCountry implements CountryInterface {
     return $this -> numberOfTroops;
   }
 
+  public function isConquered(): bool {
+    if($this -> getNumberOfTroops === 0){
+      return true;
+    }
+    return false;
+  }
 
+  public function conquer(CountryInterface $conqueredCountry): void {
+    
+
+
+  }
+
+  public function killTroops(int $killedTroops): void {
+    $numberTroops = $this -> getNumberOfTroops();
+    $this -> numberOfTroops = $numberTroops - $killedTroops;
+  }
 }
