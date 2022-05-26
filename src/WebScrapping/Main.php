@@ -4,6 +4,7 @@ namespace Galoa\ExerciciosPhp2022\WebScrapping;
 
 use DOMDocument;
 
+
 /**
  * Runner for the Webscrapping exercice.
  */
@@ -17,5 +18,4 @@ class Main {
     $dom->loadHTMLFile(__DIR__ . '/../../webscrapping/origin.html');
     (new Scrapper())->scrap($dom);
   }
-
 }
