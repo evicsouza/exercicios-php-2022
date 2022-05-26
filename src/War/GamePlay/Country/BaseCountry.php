@@ -49,7 +49,24 @@ class BaseCountry implements CountryInterface {
 
   public function conquer(CountryInterface $conqueredCountry): void {
     $conqueredCountry -> getNeighbors();
-    
+    $auxVar = [];
+    foreach($conqueredCountry as $neighbors){
+      if($neighbors -> getName() != $this -> getName()){
+        $auxVar = $neighbors;
+      }
+    }
+    foreach($this -> getNeighbors() as $neighbors){
+      if ($neighbors->getName() != $conqueredCountry -> getName()){
+        $auxVar = $neighbors;
+      }
+    }
+
+    $this -> neighbors = $auxVar;
+    if(property_exists($this, "numberOfConquered") == FALSE){
+      $this -> numberOfConquered = 1;
+    }
+    else
+      $this -> numberOfConquered++;   
 
 
   }
