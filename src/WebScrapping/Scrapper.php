@@ -81,7 +81,7 @@ class Scrapper {
     $dadosXls .= " <tr>"; 
     $dadosXls .= " <td>".$res['id']."</td>"; 
     $dadosXls .= " <td>".$res['nome']."</td>"; 
-    $dadosXls .= " <td>".$res['email']."</td>"; 
+    $dadosXls .= " <td>".$res['email']."</td>"; c
     $dadosXls .= " </tr>"; } 
     $dadosXls .= " </table>"; // Definimos o nome do arquivo que será exportado 
     $arquivo = "MinhaPlanilha.xls"; // Configurações header para forçar o download 
